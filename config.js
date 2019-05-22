@@ -1,11 +1,11 @@
 const config = {
   mysql: {
     connectionLimit : 10,
-    host: "localhost",
-    port: 3306,
+    host: "112.64.158.146",
+    port: 33306,
     user: 'root',
     password: 'aixiaoyao',
-    database: 'myblog'
+    database: 'blog'
   }
 }
 module.exports = config;

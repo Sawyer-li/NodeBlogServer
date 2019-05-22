@@ -10,12 +10,11 @@ exports.getAllDocTitle = function(callback){
 }
 
 //查询某个文章详情
-exports.getDocItems = function(callback){
+exports.getDocItems = function(id, callback){
   const _sql = "select * from sys_doc where id = ?"
-  const _addSqlParam = [this.props.id];
+  const _addSqlParam = id;  
   connect.querySQL(_sql, _addSqlParam, (err, rows, fields) => {
     if (err) throw(err);
-    console.log(rows);
     callback(err, rows);
   })
 }
@@ -31,6 +30,8 @@ exports.senddoc = function(docData, callback){
     callback(err, rows)
   })
 }
+
+
 
 
 // console.log(Doc.getAllDocTitle.);
