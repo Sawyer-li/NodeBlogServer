@@ -9,6 +9,7 @@ exports.querySQL = function(sql, callback) {
    */
   const data = arguments;
   pool.getConnection(function(err, connection) {
+    console.log(err);
     if (err) throw err;
     if (data.length === 3) {
       const _sql = data[0];

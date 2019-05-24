@@ -107,16 +107,24 @@ router.get('/doc/senddoc', function(req, res){
             return;
         }
         //若干类型判断
-        let doc = new Doc({props: props});
-        doc.init();
-        doc.senddoc(function(){
+        Doc.senddoc(props, function(){
             _res.status(200);
             _res.json({result: 1,id: 2});      
-        })          
+        })
     }else{
       res.json({isLogin: false}) 
     }
   console.log(req.session);        
+})
+router.get('/blog/:id', function(req, res){
+  const { id } = req.params;
+  Doc.getDocItems(id, function(err, data){
+    if(data.length === 0){
+      res.status(404).end();
+    }else{
+      res.json(data[0])
+    }
+  });
 })
 
 /**
