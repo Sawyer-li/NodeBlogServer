@@ -1,5 +1,5 @@
 {
-  "name": "mynewblog",
+  "name": "MyBlog",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,6 +8,7 @@
   },
   "author": "",
   "license": "ISC",
+  "apidoc": { "title": "这是一个标题", "url" : "www.shidao.com/v1" },
   "dependencies": {
     "ejs": "^2.5.8",
     "express": "^4.16.3",

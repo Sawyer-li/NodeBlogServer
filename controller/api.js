@@ -7,13 +7,21 @@ const Doc = require('../models/doc.db.js');
 const FS_PATH_SERVICES = './controller/services';
 const REQUIRE_PATH_SERVICES = './services'
 
-//router.option('*', function(req,res, next){
-//  next();        
-//})
+
 router.get('/',function(req,res){
   res.send('这是api');        
 })
-
+/**
+ * @api {post} /user/register register
+ * @apiName RegisterUser
+ * @apiGroup User
+ *
+ * @apiParam {String} name user name 
+ * @apiParam {String} password user password
+ *
+ * @apiSuccess {String} firstname Firstname of the User.
+ * @apiSuccess {String} lastname  Lastname of the User.
+ */
 router.get('/user/register',function(req, res){
   let props = req.query;
   props.password = Helper.getMD5(req.query.password);
@@ -24,7 +32,17 @@ router.get('/user/register',function(req, res){
   })
   res.send('注册通过了');  
 })
-//登入接口
+
+/**
+ * @api {get} /user/login login
+ * @apiName LoginUser
+ * @apiGroup User
+ *
+ * @apiParam {Number} id Users unique ID.
+ *
+ * @apiSuccess {String} firstname Firstname of the User.
+ * @apiSuccess {String} lastname  Lastname of the User.
+ */
 router.get('/user/login', function(req, res){
   let props = req.query;
   let _res = res;
@@ -57,6 +75,19 @@ router.get('/user/islogin', function(req, res){
     }
   console.log(req.session);        
 })
+
+/**
+ * @api {get} /blog/senddoc send blog
+ * @apiName SendBlog
+ * @apiGroup Blog
+ * 
+ * @apiParam {String} title 
+ * @apiParam {String} author 
+ * @apiParam {String} dochtml
+ *  
+ * @apiSuccess {String} firstname Firstname of the User.
+ * @apiSuccess {String} lastname  Lastname of the User.
+ */
 router.get('/doc/senddoc', function(req, res){
     let props = req.query;
     let _res = res;
@@ -88,6 +119,14 @@ router.get('/doc/senddoc', function(req, res){
   console.log(req.session);        
 })
 
+/**
+ * @api {get} /blog/getAllTitle GetAllBlogTitle
+ * @apiName GetAllBlogTitle
+ * @apiGroup Blog
+ *
+ * @apiSuccess {String} firstname Firstname of the User.
+ * @apiSuccess {String} lastname  Lastname of the User.
+ */
 router.get('/doc/getAllTitle', (req, res) => {
   const _res = res;
   Doc.getAllDocTitle((err, data)=>{

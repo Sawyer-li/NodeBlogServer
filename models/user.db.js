@@ -1,6 +1,14 @@
-const mysql = require('mysql'),
-config = require('../config').mysql;
- 
+const connect = require('./utils/connect');
+exports.addUser = function(props,callback){
+  const registerTime = new Date();
+  const _addSql = 'INSERT sys_user(username,password,create_time) VALUES(?,?,?)';
+  const _addSqlParam = [props.name,props.password,registerTime]
+  connect.querySQL(_addSql, _addSqlParam, (err, rows, fields) => {
+    if(err) throw err;
+    console.log(rows);
+  })
+
+}
 let User = function(user){
   if(user){
     this.props = user.props
