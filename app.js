@@ -3,10 +3,14 @@ const app = express();
 const mysql = require('mysql');
 const config = require('./config.js');
 const session = require('express-session');
+const bodyParser = require('body-parser');
 const con = mysql.createConnection(config.mysql);
 const routes = require('./controller/router.js');
-const api = require('./controller/api.js');
+const api = require('./controller');
 
+
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.use(session({                                //session的设置
     name: 'connect_sesion',                      //会话的名称
     secret: 'keyboard pig',
@@ -19,6 +23,7 @@ app.set('view engine','ejs');
 app.use(express.static('public'));
 app.use('/',routes);
 app.use('/api',api);
+
 
 const server = app.listen(3000, function(){
   const port = server.address().port;

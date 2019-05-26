@@ -8,7 +8,7 @@
   },
   "author": "",
   "license": "ISC",
-  "apidoc": { "title": "这是一个标题", "url" : "www.shidao.com/v1" },
+  "apidoc": { "title": "这是一个标题", "url" : "localhost:3000","sampleUrl": "http://localhost:3000/api" },
   "dependencies": {
     "ejs": "^2.5.8",
     "express": "^4.16.3",

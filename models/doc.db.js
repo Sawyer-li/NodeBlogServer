@@ -23,7 +23,6 @@ exports.senddoc = function(docData, callback){
   const _sqlParam = [docData.dochtml, createTimer, docData.author, docData.title];
   connect.querySQL(_sql,  _sqlParam, function(err, rows, fields){
     if (err) throw(err);;
-    console.log(rows);
-    callback(err, rows)
+    callback(err, 1)
   })
 }
