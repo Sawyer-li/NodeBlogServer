@@ -6,6 +6,7 @@ const config = {
     user: 'root',
     password: 'aixiaoyao',
     database: 'blog'
-  }
+  },
+  jwtsecret: 'aixiaoyao'
 }
 module.exports = config;

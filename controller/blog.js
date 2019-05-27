@@ -15,26 +15,25 @@ const Doc = require("../models/doc.db.js");
  */
 router.post("/senddoc", function(req, res) {
   const { title, author, dochtml } = req.body;
-  if (req.session.isLogin == 1) {
-    if (!title) {
-      res.status(400).json({msg: "title is null" });
-      return;
-    }
-    if (!author) {
-      res.status(400).json({ msg: "author is null" });
-      return;
-    }
-    if (!dochtml) {
-      res.status(400).json({ msg: "dochtml is null" });
-      return;
-    }
-    //若干类型判断
-    Doc.senddoc(req.body, function() {
-      res.json({ id: 2 });
-    });
-  } else {
+  console.log(req.body);
+  console.log(req.header.headers.authorization);
+    // if (!title) {
+    //   res.status(400).json({msg: "title is null" });
+    //   return;
+    // }
+    // if (!author) {
+    //   res.status(400).json({ msg: "author is null" });
+    //   return;
+    // }
+    // if (!dochtml) {
+    //   res.status(400).json({ msg: "dochtml is null" });
+    //   return;
+    // }
+    // //若干类型判断
+    // Doc.senddoc(req.body, function() {
+    //   res.json({ id: 2 });
+    // });
     res.status(403).json({ msg: "no login"});
-  }
 });
 
 /**

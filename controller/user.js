@@ -1,6 +1,8 @@
 const express = require("express");
 let router = express.Router();
-const User = require("../models/user.db.js");
+const User = require("../models/user.db.js"); 
+const jwt = require('jsonwebtoken');
+const jwtsecret = require('../config').jwtsecret;
 /**
  * @api {post} /api/user/register register
  * @apiName RegisterUser
@@ -52,10 +54,13 @@ router.post("/login", function(req, res) {
     if (err) throw err;
     if (data) {
       if (password === data.password) {
-        req.session.isLogin = 1;
-        req.session.userName = name;
+        const user = req.body;
+        const token =  jwt.sign(user, jwtsecret, {
+          expiresIn: '2 days'
+        });
         res.json({
-          mess: "登入成功"
+          msg: "登入成功",
+          token
         });
       } else {
         res.status(401).json({
