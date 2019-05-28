@@ -1,6 +1,10 @@
 const express = require("express");
 let router = express.Router();
 const Doc = require("../models/doc.db.js");
+
+const expressJwt = require("express-jwt");
+const { jwtsecret } = require('../config');
+const jwtAuth = expressJwt({secret: jwtsecret});
 /**
  * @api {post} /api/blog/senddoc SendBlog
  * @apiName SendBlog
@@ -13,7 +17,7 @@ const Doc = require("../models/doc.db.js");
  * @apiSuccess {String} firstname Firstname of the User.
  * @apiSuccess {String} lastname  Lastname of the User.
  */
-router.post("/senddoc", function(req, res) {
+router.post("/senddoc",jwtAuth, function(req, res) {
   const { title, dochtml } = req.body;
   const  author  = req.user.name;
   if (!title) {
@@ -33,9 +37,9 @@ router.post("/senddoc", function(req, res) {
     author,
     title,
     dochtml
-  }, function() {
-    console.log("success");
-    res.json({ id: 2 });
+  }, function(err, id) {
+    if (err) throw err;
+    res.json({ id });
   });
 });
 
@@ -50,10 +54,7 @@ router.post("/senddoc", function(req, res) {
 router.get("/getAllTitle", (req, res) => {
   Doc.getAllDocTitle((err, data) => {
     if (err) console.log(err);
-    res.json({
-      status: 1,
-      data: data
-    });
+    res.json(data);
   });
 });
 
