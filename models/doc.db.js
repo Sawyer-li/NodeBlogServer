@@ -18,9 +18,10 @@ exports.getDocItems = function(id, callback){
 }
 //发送一篇文章
 exports.senddoc = function(docData, callback){
+  const {dochtml, author, title} = docData;
   const _sql = 'INSERT sys_doc(dochtml,create_time,author,title) VALUES(?,?,?,?)';
   const createTimer = new Date();
-  const _sqlParam = [docData.dochtml, createTimer, docData.author, docData.title];
+  const _sqlParam = [dochtml, createTimer, author, title];
   connect.querySQL(_sql,  _sqlParam, function(err, rows, fields){
     if (err) throw(err);;
     callback(err, 1)
