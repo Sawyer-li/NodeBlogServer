@@ -1,8 +1,9 @@
 const connect = require('./utils/connect');
-exports.addUser = function(name, password,callback){
+exports.addUser = function(user,callback){
+  const {name, password, email } = user;
   const registerTime = new Date();
-  const _addSql = 'INSERT sys_user(username,password,create_time) VALUES(?,?,?)';
-  const _addSqlParam = [name,password,registerTime]
+  const _addSql = 'INSERT sys_user(username,password,create_time,email) VALUES(?,?,?,?)';
+  const _addSqlParam = [name,password,registerTime,email]
   connect.querySQL(_addSql, _addSqlParam, (err, rows, fields) => {
     if(err) throw err;
     callback(null, 1)
@@ -19,23 +20,3 @@ exports.getUserAllItems = function(name, callback){
       callback(null, null)
   })
 }
-
-// function handledisconnect(connection) {
-//     connection.on('error', function(err) {
-//         if (!err.fatal) {
-//           return;
-//         }
-
-//         if (err.code !== 'protocol_connection_lost') {
-//           throw err;
-//         }
-
-//         console.log('re-connecting lost connection: ' + err.stack);
-
-//         connection = mysql.createconnection(connection.config);
-//         handledisconnect(connection);
-//         connection.connect();
-//   });
-// }
-
-// module.exports = User;
