@@ -19,3 +19,4 @@
 [2019-06-05T11:03:01.582] [DEBUG] normal - GET /api/blog/getAllTitle
 [2019-06-05T11:05:19.488] [INFO] normal - start listen to 3000
 [2019-06-05T11:05:22.612] [DEBUG] normal - GET /api/blog/getAllTitle
+[2019-06-05T11:09:07.640] [INFO] normal - start listen to 3000

@@ -38,9 +38,9 @@ router.post("/senddoc",expressJwt({ secret: jwtsecret }), function(req, res) {
     author,
     title,
     dochtml
-  }, function() {
-    console.log("success");
-    res.json({ id: 2 });
+  }, function(err, id) {
+    if (err) throw err;
+    res.json({ id });
   });
 });
 

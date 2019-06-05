@@ -1,13 +1,13 @@
 const connect = require('./utils/connect');
 //查询所有文章标题
 exports.getAllDocTitle = function(callback){
-  const _sql = "select id,title from sys_doc order by id desc";
+  const _sql = "SELECT id,title,author,create_time FROM sys_doc ORDER BY id DESC";
   connect.querySQL(_sql, (err, rows, fields) => {
     if (err) throw(err);
     callback(err, rows);
   })
 }
-//查询某个文章详情
+//根据id查询文章详情
 exports.getDocItems = function(id, callback){
   const _sql = "select * from sys_doc where id = ?"
   const _addSqlParam = [id];
@@ -24,6 +24,6 @@ exports.senddoc = function(docData, callback){
   const _sqlParam = [dochtml, createTimer, author, title];
   connect.querySQL(_sql,  _sqlParam, function(err, rows, fields){
     if (err) throw(err);;
-    callback(err, 1)
+    callback(err, rows.insertId)
   })
 }

@@ -15,14 +15,20 @@ const jwtsecret = require('../config').jwtsecret;
  * @apiSuccess {String} lastname  Lastname of the User.
  */
 router.post("/register", function(req, res) {
-  const { name, password } = req.body;
-  console.log(req.body);
-  if (!name || name === "" || !password || password === "") {
+  const { name, password, email } = req.body;
+  
+console.log(name,password, email);
+  if (!name  || !password  || !email ) {
     return res.status(401).json({
-      mess: "账户或密码为空"
+      mess: "有必填项为空"
     });
   }
-  User.addUser(name, password, function(err, data) {
+
+  User.addUser({
+    name,
+    password,
+    email
+  }, function(err, data) {
     if (err) throw err;
     if(data)
       return res.json({
