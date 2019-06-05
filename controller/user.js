@@ -1,8 +1,8 @@
 const express = require("express");
 let router = express.Router();
-const User = require("../models/user.db.js"); 
-const jwt = require('jsonwebtoken');
-const jwtsecret = require('../config').jwtsecret;
+const User = require("../models/user.db.js");
+const jwt = require("jsonwebtoken");
+const jwtsecret = require("../config").jwtsecret;
 /**
  * @api {post} /api/user/register register
  * @apiName RegisterUser
@@ -16,25 +16,28 @@ const jwtsecret = require('../config').jwtsecret;
  */
 router.post("/register", function(req, res) {
   const { name, password, email } = req.body;
-  
-console.log(name,password, email);
-  if (!name  || !password  || !email ) {
+  if (!name || !password || !email) {
     return res.status(401).json({
-      mess: "有必填项为空"
+      msg: "有必填项为空"
     });
   }
 
-  User.addUser({
-    name,
-    password,
-    email
-  }, function(err, data) {
-    if (err) throw err;
-    if(data)
-      return res.json({
-        mess: "创建成功"
-      })
-  });
+  User.addUser(
+    {
+      name,
+      password,
+      email
+    },
+    function(err, data) {
+      if (err) {
+        res.status(err.type).json({ msg: err.msg });
+      } else {
+        res.json({
+          msg: "创建成功"
+        });
+      }
+    }
+  );
 });
 
 /**
@@ -61,8 +64,8 @@ router.post("/login", function(req, res) {
     if (data) {
       if (password === data.password) {
         const user = req.body;
-        const token =  jwt.sign(user, jwtsecret, {
-          expiresIn: '2 days'
+        const token = jwt.sign(user, jwtsecret, {
+          expiresIn: "2 days"
         });
         res.json({
           msg: "登入成功",

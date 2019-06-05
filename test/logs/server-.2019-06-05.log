@@ -1,0 +1,56 @@
+[2019-06-05T14:16:18.724] [ERROR] normal - { Error: ER_BAD_FIELD_ERROR: Unknown column 'lidongye' in 'where clause'
+    at Query.Sequence._packetToError (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:103:28)
+    at Socket.emit (events.js:197:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    --------------------
+    at Protocol._enqueue (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:208:25)
+    at /Users/sawyer/githublib/own/myNodeBlog/models/utils/connect.js:25:18
+    at Handshake.onConnect [as _callback] (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'lidongye' in 'where clause'",
+  sqlState: '42S22',
+  index: 0,
+  sql: 'SELECT id from sys_user where username=lidongye' }
+[2019-06-05T14:17:01.427] [ERROR] normal - { Error: ER_BAD_FIELD_ERROR: Unknown column 'lidongye' in 'where clause'
+    at Query.Sequence._packetToError (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:103:28)
+    at Socket.emit (events.js:197:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    --------------------
+    at Protocol._enqueue (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:208:25)
+    at /Users/sawyer/githublib/own/myNodeBlog/models/utils/connect.js:25:18
+    at Handshake.onConnect [as _callback] (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'lidongye' in 'where clause'",
+  sqlState: '42S22',
+  index: 0,
+  sql: 'SELECT id from sys_user where username=lidongye' }
