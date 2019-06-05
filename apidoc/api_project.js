@@ -1,1 +1,0 @@
-define({  "title": "这是一个标题",  "url": "localhost:3000",  "sampleUrl": "http://localhost:3000/api",  "name": "MyBlog",  "version": "1.0.0",  "description": "",  "defaultVersion": "0.0.0",  "apidoc": "0.3.0",  "generator": {    "name": "apidoc",    "time": "2019-05-26T14:06:19.535Z",    "url": "http://apidocjs.com",    "version": "0.17.7"  }});

@@ -1,6 +1,0 @@
-[2019-06-04T21:14:14.779] [INFO] normal - start listen to 3000
-[2019-06-04T21:34:14.266] [DEBUG] normal - POST /api/user/login
-[2019-06-04T21:38:32.134] [DEBUG] normal - POST /api/blog/senddoc
-[2019-06-04T21:38:32.779] [DEBUG] normal - GET /api/blog/getBlogDetail/2
-[2019-06-04T21:39:39.005] [DEBUG] normal - GET /api/blog/getAllTitle
-[2019-06-04T21:39:48.713] [DEBUG] normal - GET /api/blog/getAllTitle
