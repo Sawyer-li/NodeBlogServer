@@ -17,6 +17,7 @@ app.use(session({               //session的设置
     resave: false,
     saveUninitialized: true
 }));
+
 log4use(app);
 app.set('views','views');
 app.set('view engine','ejs');
