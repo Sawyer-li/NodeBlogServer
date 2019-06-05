@@ -74,9 +74,7 @@ router.post("/login", function(req, res) {
     }
   });
 });
-
-
-router.get("/user/islogin", function(req, res) {
+router.get("/user", function(req, res) {
   if (req.session.isLogin == 1) {
     res.json({ isLogin: true, userName: req.session.userName });
   } else {

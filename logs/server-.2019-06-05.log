@@ -1,0 +1,21 @@
+[2019-06-05T10:12:32.521] [INFO] normal - start listen to 3000
+[2019-06-05T10:13:26.462] [DEBUG] normal - POST /api/user/login
+[2019-06-05T10:13:31.504] [DEBUG] normal - GET /api/blog/getAllTitle
+[2019-06-05T10:13:42.281] [DEBUG] normal - GET /api/blog/getAllTitle
+[2019-06-05T10:18:37.512] [DEBUG] normal - GET /api/blog/getAllTitle
+[2019-06-05T10:18:44.055] [DEBUG] normal - GET /api/blog/getAllTitle
+[2019-06-05T10:18:46.715] [DEBUG] normal - GET /api/blog/getAllTitle
+[2019-06-05T10:58:19.969] [INFO] normal - start listen to 3000
+[2019-06-05T10:58:41.128] [DEBUG] normal - GET /api/blog/getAllTitle
+[2019-06-05T10:59:00.026] [DEBUG] normal - GET /api/blog/getAllTitle
+[2019-06-05T10:59:01.960] [DEBUG] normal - GET /api/blog/getAllTitle
+[2019-06-05T10:59:04.338] [DEBUG] normal - GET /api/blog/getBlogDetail/25
+[2019-06-05T10:59:06.016] [DEBUG] normal - GET /api/blog/getAllTitle
+[2019-06-05T11:02:34.985] [DEBUG] normal - GET /api/blog/getAllTitle
+[2019-06-05T11:02:52.357] [DEBUG] normal - POST /api/blog/senddoc
+[2019-06-05T11:02:52.916] [DEBUG] normal - GET /api/blog/getBlogDetail/2
+[2019-06-05T11:02:55.405] [DEBUG] normal - GET /api/blog/getAllTitle
+[2019-06-05T11:02:59.948] [DEBUG] normal - GET /api/blog/getBlogDetail/28
+[2019-06-05T11:03:01.582] [DEBUG] normal - GET /api/blog/getAllTitle
+[2019-06-05T11:05:19.488] [INFO] normal - start listen to 3000
+[2019-06-05T11:05:22.612] [DEBUG] normal - GET /api/blog/getAllTitle

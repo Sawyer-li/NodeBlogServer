@@ -1,7 +1,7 @@
 const connect = require('./utils/connect');
 //查询所有文章标题
 exports.getAllDocTitle = function(callback){
-  const _sql = "select id,title from sys_doc";
+  const _sql = "select id,title from sys_doc order by id desc";
   connect.querySQL(_sql, (err, rows, fields) => {
     if (err) throw(err);
     callback(err, rows);

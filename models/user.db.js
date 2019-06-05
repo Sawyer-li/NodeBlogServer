@@ -19,23 +19,3 @@ exports.getUserAllItems = function(name, callback){
       callback(null, null)
   })
 }
-
-// function handledisconnect(connection) {
-//     connection.on('error', function(err) {
-//         if (!err.fatal) {
-//           return;
-//         }
-
-//         if (err.code !== 'protocol_connection_lost') {
-//           throw err;
-//         }
-
-//         console.log('re-connecting lost connection: ' + err.stack);
-
-//         connection = mysql.createconnection(connection.config);
-//         handledisconnect(connection);
-//         connection.connect();
-//   });
-// }
-
-// module.exports = User;
