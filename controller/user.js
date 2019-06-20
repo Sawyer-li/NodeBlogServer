@@ -3,6 +3,8 @@ let router = express.Router();
 const User = require("../models/user.db.js");
 const jwt = require("jsonwebtoken");
 const jwtsecret = require("../config").jwtsecret;
+const multer  = require('multer');
+const upload = multer({ dest: 'uploads/' });
 /**
  * @api {post} /api/user/register register
  * @apiName RegisterUser
@@ -14,6 +16,23 @@ const jwtsecret = require("../config").jwtsecret;
  * @apiSuccess {String} firstname Firstname of the User.
  * @apiSuccess {String} lastname  Lastname of the User.
  */
+router.post("/avatar", upload.single('avatar'),function(req, res){
+  // 读取上传的图片信息
+  var files = req.files;
+  // 设置返回结果
+  var result = {};
+  if(!files[0]) {
+    result.code = 1;
+    result.errMsg = '上传失败';
+  } else {
+    result.code = 0;
+    result.data = {
+      url: files[0].path
+    }
+    result.errMsg = '上传成功';
+  }
+  res.end(JSON.stringify(result));
+})
 router.post("/register", function(req, res) {
   const { name, password, email } = req.body;
   if (!name || !password || !email) {
@@ -91,4 +110,5 @@ router.get("/user", function(req, res) {
   }
   console.log(req.session);
 });
+
 module.exports = router;
