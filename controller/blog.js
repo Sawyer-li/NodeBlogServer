@@ -4,8 +4,6 @@ const Doc = require("../models/doc.db.js");
 const expressJwt = require("express-jwt")
 const { jwtsecret } = require("../config");
 
-
-
 /**
  * @api {post} /api/blog/senddoc SendBlog
  * @apiName SendBlog

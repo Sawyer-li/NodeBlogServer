@@ -33,6 +33,7 @@ router.post("/avatar", upload.single('avatar'),function(req, res){
   }
   res.end(JSON.stringify(result));
 })
+
 router.post("/register", function(req, res) {
   const { name, password, email } = req.body;
   if (!name || !password || !email) {
