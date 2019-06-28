@@ -4,7 +4,24 @@ const User = require("../models/user.db.js");
 const jwt = require("jsonwebtoken");
 const jwtsecret = require("../config").jwtsecret;
 const multer  = require('multer');
-const upload = multer({ dest: 'uploads/' });
+const storage = multer.diskStorage({
+  destination: function(req, file, cb){
+    cb(null, 'public/uploads');
+  },
+  filename: function(req, file, cb){
+    const { originalname } = file;
+    const fileArr = originalname.split(".");
+    const fileType = fileArr[fileArr.length-1];
+    const fileName =  originalname.slice(0,originalname.length - fileType.length -1);
+    cb(null, fileName + '-' + Date.now() + "." + fileType);
+  }
+});
+const upload = multer({ 
+  limits: {
+    fileSize: 1000000000
+  },
+  storage: storage
+});
 /**
  * @api {post} /api/user/register register
  * @apiName RegisterUser
@@ -17,21 +34,18 @@ const upload = multer({ dest: 'uploads/' });
  * @apiSuccess {String} lastname  Lastname of the User.
  */
 router.post("/avatar", upload.single('avatar'),function(req, res){
+  console.log("avatar success");
   // 读取上传的图片信息
-  var files = req.files;
+  var file = req.file;
   // 设置返回结果
   var result = {};
-  if(!files[0]) {
-    result.code = 1;
-    result.errMsg = '上传失败';
+  if(!file) {
+    result.errMsg = '上传失败'; 
   } else {
-    result.code = 0;
-    result.data = {
-      url: files[0].path
-    }
-    result.errMsg = '上传成功';
+    result.url = file.path;
+    result.msg = '上传成功';
   }
-  res.end(JSON.stringify(result));
+  res.json(result);
 })
 
 router.post("/register", function(req, res) {

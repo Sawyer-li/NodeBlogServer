@@ -34,6 +34,11 @@ exports.addUser = async function(user, callback) {
       callback({ type: 500 });
     });
 };
+
+exports.updateHead = function(){
+  
+}
+
 exports.getUserAllItems = function(name, callback) {
   const _sql = "select * from sys_user where username = ?";
   const _sqlParam = [name];
