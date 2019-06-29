@@ -35,12 +35,24 @@ exports.addUser = async function(user, callback) {
     });
 };
 
-exports.updateHead = function(){
-  
+exports.updateHead = function(data, callback){
+  const {path, id } = data;
+  const   _sql = `UPDATE sys_user SET head_url = ? WHERE id = ${id}`;
+  const _sqlParam = [path];
+  connect
+    .querySQL(_sql, _sqlParam)
+    .then(rows => {
+      callback(null,rows);
+    })
+    .catch(err => {
+      logger.error("updateHead error");
+      logger.error(err);
+      callback({type: 500,msg: "model层错误"});
+    })
 }
 
 exports.getUserAllItems = function(name, callback) {
-  const _sql = "select * from sys_user where username = ?";
+  const _sql = "SELECT * FROM sys_user WHERE username = ?";
   const _sqlParam = [name];
   connect
     .querySQL(_sql, _sqlParam)

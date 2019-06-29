@@ -1,8 +1,13 @@
 const express = require("express");
 let router = express.Router();
 const User = require("../models/user.db.js");
+const expressJwt = require("express-jwt")
 const jwt = require("jsonwebtoken");
-const jwtsecret = require("../config").jwtsecret;
+const { jwtsecret } = require("../config")
+
+/**
+ * multer配置
+ */
 const multer  = require('multer');
 const storage = multer.diskStorage({
   destination: function(req, file, cb){
@@ -22,6 +27,7 @@ const upload = multer({
   },
   storage: storage
 });
+
 /**
  * @api {post} /api/user/register register
  * @apiName RegisterUser
@@ -33,19 +39,26 @@ const upload = multer({
  * @apiSuccess {String} firstname Firstname of the User.
  * @apiSuccess {String} lastname  Lastname of the User.
  */
-router.post("/avatar", upload.single('avatar'),function(req, res){
-  console.log("avatar success");
+router.post("/avatar", expressJwt({ secret: jwtsecret }), upload.single('avatar'),function(req, res){
   // 读取上传的图片信息
-  var file = req.file;
+  const { file, user } = req;
   // 设置返回结果
   var result = {};
   if(!file) {
-    result.errMsg = '上传失败'; 
+    res.status(500).json({ msg: "上传图片中错误请联系管理员" }); 
   } else {
-    result.url = file.path;
-    result.msg = '上传成功';
+    const { id } = user;
+    const { path } = file;
+    User.updateHead({
+      id,
+      path
+    },(err, data)=>{
+      if(err) res.status(err.type).json({ msg: err.msg });
+      console.log(data);
+      console.log("success");
+      res.json({msg: "上传成功"});
+    })
   }
-  res.json(result);
 })
 
 router.post("/register", function(req, res) {
@@ -97,7 +110,12 @@ router.post("/login", function(req, res) {
     if (err) throw err;
     if (data) {
       if (password === data.password) {
-        const user = req.body;
+        const { username, id, head_url} = data;
+        const user = {
+          username,
+          id,
+          head_url
+        };
         const token = jwt.sign(user, jwtsecret, {
           expiresIn: "2 days"
         });
