@@ -3,7 +3,9 @@ const { logger } = require("../tool/log");
 //查询所有文章标题
 exports.getAllDocTitle = function(callback) {
   const _sql =
-    "SELECT id,title,author,create_time FROM sys_blog ORDER BY id DESC";
+    `SELECT sys_blog.id,sys_blog.title, sys_blog.create_time, sys_user.username as author
+      FROM sys_blog INNER JOIN  sys_user  on sys_blog.account_id=sys_user.id
+      ORDER BY sys_blog.id DESC`;
   connect
     .querySQL(_sql)
     .then((rows) => {
@@ -32,12 +34,11 @@ exports.getDocItems = function(id, callback) {
 };
 //发送一篇文章
 exports.senddoc = function(docData, callback) {
-  const { dochtml, author, title } = docData;
-  const _sql =
-    "INSERT sys_blog(dochtml,create_time,author,title) VALUES(?,?,?,?)";
+  const { dochtml, accountId, title } = docData;
+  const _sql = "INSERT sys_blog(dochtml, create_time, account_id, title) VALUES(?,?,?,?)";
   const createTimer = new Date();
   logger.fatal(createTimer);
-  const _sqlParam = [dochtml, createTimer, author, title];
+  const _sqlParam = [dochtml, createTimer, accountId, title];
   connect
     .querySQL(_sql, _sqlParam)
     .then((rows) => {

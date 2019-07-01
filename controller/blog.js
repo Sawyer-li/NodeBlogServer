@@ -18,12 +18,12 @@ const { jwtsecret } = require("../config");
  */
 router.post("/senddoc",expressJwt({ secret: jwtsecret }), function(req, res) {
   const { title, dochtml } = req.body;
-  const  author  = req.user.username;
+  const  accountId  = req.user.id;
   if (!title) {                 
     res.status(400).json({msg: "title is null" });
     return;
   }
-  if (!author) {
+  if (!accountId) {
     res.status(400).json({ msg: "author is null" });
     return;
   }
@@ -33,7 +33,7 @@ router.post("/senddoc",expressJwt({ secret: jwtsecret }), function(req, res) {
   }
   //若干类型判断
   Doc.senddoc({
-    author,
+    accountId,
     title,
     dochtml
   }, function(err, id) {

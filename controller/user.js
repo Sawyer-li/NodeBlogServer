@@ -107,7 +107,7 @@ router.post("/login", function(req, res) {
       mess: "账户或密码为空"
     });
   }
-  User.getUserAllItems(name, (err, data) => {
+  User.getUserByName(name, (err, data) => {
     if (err) throw err;
     if (data) {
       if (password === data.password) {
@@ -137,13 +137,7 @@ router.post("/login", function(req, res) {
     }
   });
 });
-router.get("/user", function(req, res) {
-  if (req.session.isLogin == 1) {
-    res.json({ isLogin: true, userName: req.session.userName });
-  } else {
-    res.json({ isLogin: false });
-  }
-  console.log(req.session);
-});
+router.get("/:username", function(req, res){
 
+})
 module.exports = router;

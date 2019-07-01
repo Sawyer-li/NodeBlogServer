@@ -50,8 +50,7 @@ exports.updateHead = function(data, callback){
       callback({type: 500,msg: "model层错误"});
     })
 }
-
-exports.getUserAllItems = function(name, callback) {
+exports.getUserByName = function(name, callback) {
   const _sql = "SELECT * FROM sys_user WHERE username = ?";
   const _sqlParam = [name];
   connect
@@ -63,7 +62,24 @@ exports.getUserAllItems = function(name, callback) {
       }
     })
     .catch(err => {
-      logger.error("getUserAllItems error");
+      logger.error("getUserByName error");
+      logger.error(err);
+      callback({ type: 500 });
+    });
+};
+exports.getUserById = function(id, callback) {
+  const _sql = "SELECT * FROM sys_user WHERE id = ?";
+  const _sqlParam = [name];
+  connect
+    .querySQL(_sql, _sqlParam)
+    .then(rows => {
+      if (rows[0]) callback(null, rows[0]);
+      else{
+        callback(null, null);
+      }
+    })
+    .catch(err => {
+      logger.error("getUserById error");
       logger.error(err);
       callback({ type: 500 });
     });
