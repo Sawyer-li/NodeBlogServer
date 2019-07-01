@@ -18,7 +18,7 @@ const { jwtsecret } = require("../config");
  */
 router.post("/senddoc",expressJwt({ secret: jwtsecret }), function(req, res) {
   const { title, dochtml } = req.body;
-  const  author  = req.user.name;
+  const  author  = req.user.username;
   if (!title) {                 
     res.status(400).json({msg: "title is null" });
     return;

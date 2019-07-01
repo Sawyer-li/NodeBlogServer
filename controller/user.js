@@ -49,20 +49,20 @@ router.post("/avatar", expressJwt({ secret: jwtsecret }), upload.single('avatar'
   } else {
     const { id } = user;
     const { path } = file;
+    const truePath  = path.slice(6);
     User.updateHead({
       id,
-      path
+      path: truePath
     },(err, data)=>{
       if(err) res.status(err.type).json({ msg: err.msg });
-      console.log(data);
-      console.log("success");
-      res.json({msg: "上传成功"});
+      res.json({msg: "上传成功",path: truePath});
     })
   }
 })
 
 router.post("/register", function(req, res) {
   const { name, password, email } = req.body;
+  const head_url = "/defaultHead.jpeg"; 
   if (!name || !password || !email) {
     return res.status(401).json({
       msg: "有必填项为空"
@@ -73,7 +73,8 @@ router.post("/register", function(req, res) {
     {
       name,
       password,
-      email
+      email,
+      head_url
     },
     function(err, data) {
       if (err) {
@@ -121,7 +122,8 @@ router.post("/login", function(req, res) {
         });
         res.json({
           msg: "登入成功",
-          token
+          token,
+          user
         });
       } else {
         res.status(401).json({

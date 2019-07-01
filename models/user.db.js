@@ -2,7 +2,7 @@ const connect = require("./utils/connect");
 const { logger } = require("../tool/log");
 
 exports.addUser = async function(user, callback) {
-  const { name, password, email } = user;
+  const { name, password, email, head_url } = user;
   const findNameSql = `SELECT id from sys_user where username='${name}'`;
   const findEmailSql = `SELECT id from sys_user where email='${email}'`;
   await Promise.all([
@@ -17,8 +17,8 @@ exports.addUser = async function(user, callback) {
       if (canInsert) {
         const registerTime = new Date();
         const _addSql =
-          "INSERT sys_user(username,password,create_time,email) VALUES(?,?,?,?)";
-        const _addSqlParam = [name, password, registerTime, email];
+          "INSERT sys_user(username,password,create_time,email,head_url) VALUES(?,?,?,?,?)";
+        const _addSqlParam = [name, password, registerTime, email,head_url];
         connect.querySQL(_addSql, _addSqlParam).then(rows => {
           callback(null, {
             msg: "插入成功"
