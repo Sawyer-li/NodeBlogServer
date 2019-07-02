@@ -1,0 +1,660 @@
+[2019-07-02T15:43:08.827] [ERROR] normal - database query fail
+[2019-07-02T15:43:08.829] [ERROR] normal - getDocItems error:
+[2019-07-02T15:43:08.829] [ERROR] normal - { Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'undefined' at line 2
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:33:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'undefined\' at line 2',
+  sqlState: '42000',
+  index: 0,
+  sql: 'INSERT sys_comment(blog_id, content, user_id, replied_id) \n        VALUES(1,我的腳步想要去流浪，我的心卻想靠行, 1), undefined' }
+[2019-07-02T15:43:41.341] [ERROR] normal - database query fail
+[2019-07-02T15:43:41.343] [ERROR] normal - getDocItems error:
+[2019-07-02T15:43:41.343] [ERROR] normal - { Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'undefined' at line 2
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:33:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'undefined\' at line 2',
+  sqlState: '42000',
+  index: 0,
+  sql: 'INSERT sys_comment(blog_id, content, user_id, replied_id) \n        VALUES(1,我的腳步想要去流浪，我的心卻想靠行, 1), undefined' }
+[2019-07-02T15:44:05.660] [ERROR] normal - database query fail
+[2019-07-02T15:44:05.661] [ERROR] normal - getDocItems error:
+[2019-07-02T15:44:05.661] [ERROR] normal - { Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'undefined' at line 2
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:33:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'undefined\' at line 2',
+  sqlState: '42000',
+  index: 0,
+  sql: 'INSERT sys_comment(blog_id, content, user_id, replied_id) \n        VALUES(1,我的腳步想要去流浪，我的心卻想靠行, 1), undefined' }
+[2019-07-02T15:44:59.727] [ERROR] normal - database query fail
+[2019-07-02T15:44:59.729] [ERROR] normal - getDocItems error:
+[2019-07-02T15:44:59.729] [ERROR] normal - { Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'undefined' at line 2
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:33:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'undefined\' at line 2',
+  sqlState: '42000',
+  index: 0,
+  sql: 'INSERT sys_comment(blog_id, content, user_id, replied_id) \n        VALUES(1,我的腳步想要去流浪，我的心卻想靠行, 1), undefined' }
+[2019-07-02T15:46:13.859] [ERROR] normal - database query fail
+[2019-07-02T15:46:13.861] [ERROR] normal - getDocItems error:
+[2019-07-02T15:46:13.861] [ERROR] normal - { Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'undefined)' at line 2
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:33:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sqlMessage: 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'undefined)\' at line 2',
+  sqlState: '42000',
+  index: 0,
+  sql: 'INSERT sys_comment(blog_id, content, user_id, replied_id) \n        VALUES(1,我的腳步想要去流浪，我的心卻想靠行, 1), undefined)' }
+[2019-07-02T15:46:27.312] [ERROR] normal - database query fail
+[2019-07-02T15:46:27.314] [ERROR] normal - getDocItems error:
+[2019-07-02T15:46:27.314] [ERROR] normal - { Error: ER_BAD_FIELD_ERROR: Unknown column '我的腳步想要去流浪，我的心卻想靠行' in 'field list'
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:33:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'我的腳步想要去流浪，我的心卻想靠行\' in \'field list\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: 'INSERT sys_comment(blog_id, content, user_id, replied_id) \n        VALUES(1,我的腳步想要去流浪，我的心卻想靠行, 1, undefined)' }
+[2019-07-02T15:46:47.113] [ERROR] normal - database query fail
+[2019-07-02T15:46:47.115] [ERROR] normal - getDocItems error:
+[2019-07-02T15:46:47.115] [ERROR] normal - { Error: ER_BAD_FIELD_ERROR: Unknown column '我的腳步想要去流浪我的心卻想靠行' in 'field list'
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:33:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'我的腳步想要去流浪我的心卻想靠行\' in \'field list\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: 'INSERT sys_comment(blog_id, content, user_id, replied_id) \n        VALUES(1,我的腳步想要去流浪我的心卻想靠行, 1, 1)' }
+[2019-07-02T15:51:47.996] [ERROR] normal - database query fail
+[2019-07-02T15:51:47.998] [ERROR] normal - getDocItems error:
+[2019-07-02T15:51:47.998] [ERROR] normal - { Error: ER_BAD_FIELD_ERROR: Unknown column '我的腳步想要去流浪我的心卻想靠行' in 'field list'
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:33:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'我的腳步想要去流浪我的心卻想靠行\' in \'field list\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: 'INSERT sys_comment(blog_id, content) VALUES(1,我的腳步想要去流浪我的心卻想靠行)' }
+[2019-07-02T15:52:18.412] [ERROR] normal - database query fail
+[2019-07-02T15:52:18.414] [ERROR] normal - getDocItems error:
+[2019-07-02T15:52:18.414] [ERROR] normal - { Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect string value: '\xE6\x88\x91\xE7\x9A\x84...' for column 'content' at row 1
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:33:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_TRUNCATED_WRONG_VALUE_FOR_FIELD',
+  errno: 1366,
+  sqlMessage: 'Incorrect string value: \'\\xE6\\x88\\x91\\xE7\\x9A\\x84...\' for column \'content\' at row 1',
+  sqlState: 'HY000',
+  index: 0,
+  sql: 'INSERT sys_comment(blog_id, content) VALUES(1,\'我的腳步想要去流浪我的心卻想靠行\')' }
+[2019-07-02T15:52:42.279] [ERROR] normal - database query fail
+[2019-07-02T15:52:42.281] [ERROR] normal - getDocItems error:
+[2019-07-02T15:52:42.281] [ERROR] normal - { Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect string value: '\xE6\x88\x91\xE7\x9A\x84...' for column 'content' at row 1
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:33:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_TRUNCATED_WRONG_VALUE_FOR_FIELD',
+  errno: 1366,
+  sqlMessage: 'Incorrect string value: \'\\xE6\\x88\\x91\\xE7\\x9A\\x84...\' for column \'content\' at row 1',
+  sqlState: 'HY000',
+  index: 0,
+  sql: 'INSERT sys_comment(blog_id, content) VALUES(1,"我的腳步想要去流浪我的心卻想靠行")' }
+[2019-07-02T15:55:06.145] [ERROR] normal - database query fail
+[2019-07-02T15:55:06.147] [ERROR] normal - getDocItems error:
+[2019-07-02T15:55:06.147] [ERROR] normal - { Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect string value: '\xE6\x88\x91\xE7\x9A\x84...' for column 'content' at row 1
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:22:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_TRUNCATED_WRONG_VALUE_FOR_FIELD',
+  errno: 1366,
+  sqlMessage: 'Incorrect string value: \'\\xE6\\x88\\x91\\xE7\\x9A\\x84...\' for column \'content\' at row 1',
+  sqlState: 'HY000',
+  index: 0,
+  sql: 'INSERT sys_comment(user_id, blog_id, content,  replied_id) VALUES(1, 1, \'我的腳步想要去流浪我的心卻想靠行\', 1)' }
+[2019-07-02T15:56:52.586] [ERROR] normal - database query fail
+[2019-07-02T15:56:52.587] [ERROR] normal - getDocItems error:
+[2019-07-02T15:56:52.587] [ERROR] normal - { Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect string value: '\xE5\xA4\xA7\xE8\xB3\xBD...' for column 'content' at row 1
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:22:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_TRUNCATED_WRONG_VALUE_FOR_FIELD',
+  errno: 1366,
+  sqlMessage: 'Incorrect string value: \'\\xE5\\xA4\\xA7\\xE8\\xB3\\xBD...\' for column \'content\' at row 1',
+  sqlState: 'HY000',
+  index: 0,
+  sql: 'INSERT sys_comment(user_id, blog_id, content,  replied_id) VALUES(1, 1, \'213大賽的123\', 1)' }
+[2019-07-02T15:59:33.564] [ERROR] normal - database query fail
+[2019-07-02T15:59:33.565] [ERROR] normal - getDocItems error:
+[2019-07-02T15:59:33.565] [ERROR] normal - { Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect string value: '\xE6\xB5\x8B\xE8\xAF\x95...' for column 'content' at row 1
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:22:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_TRUNCATED_WRONG_VALUE_FOR_FIELD',
+  errno: 1366,
+  sqlMessage: 'Incorrect string value: \'\\xE6\\xB5\\x8B\\xE8\\xAF\\x95...\' for column \'content\' at row 1',
+  sqlState: 'HY000',
+  index: 0,
+  sql: 'INSERT sys_comment(user_id, blog_id, content,  replied_id) VALUES(1, 1, \'1231231231233333333333333333测试333333333333333333333333333333333333333333123123\', 1)' }
+[2019-07-02T16:10:40.785] [ERROR] normal - database query fail
+[2019-07-02T16:10:40.787] [ERROR] normal - getDocItems error:
+[2019-07-02T16:10:40.787] [ERROR] normal - { Error: ER_BAD_FIELD_ERROR: Unknown column '？' in 'field list'
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:22:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'？\' in \'field list\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: 'INSERT sys_comment(user_id, blog_id, content,  replied_id, create_time) VALUES(1, 1, \'123123123123333333333333333333333333333333333333333333333333333123123\', 1, ？)' }
+[2019-07-02T16:15:07.931] [ERROR] normal - database query fail
+[2019-07-02T16:15:07.932] [ERROR] normal - getDocItems error:
+[2019-07-02T16:15:07.932] [ERROR] normal - { Error: ER_BAD_FIELD_ERROR: Unknown column '？' in 'field list'
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:22:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'？\' in \'field list\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: 'INSERT sys_comment(user_id, blog_id, content,  replied_id, create_time) VALUES(1, 1, \'123123123123333333333333333333333333333333333333333333333333333123123\', 1, ？)' }
+[2019-07-02T16:15:47.098] [ERROR] normal - database query fail
+[2019-07-02T16:15:47.099] [ERROR] normal - getDocItems error:
+[2019-07-02T16:15:47.099] [ERROR] normal - { Error: ER_BAD_FIELD_ERROR: Unknown column '？' in 'field list'
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:22:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'？\' in \'field list\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: 'INSERT sys_comment(user_id, blog_id, content,  replied_id, create_time) VALUES(1, 1, \'123123123123333333333333333333333333333333333333333333333333333123123\', 1, ？)' }
+[2019-07-02T16:16:10.716] [ERROR] normal - database query fail
+[2019-07-02T16:16:10.720] [ERROR] normal - getDocItems error:
+[2019-07-02T16:16:10.721] [ERROR] normal - { Error: ER_BAD_FIELD_ERROR: Unknown column '？' in 'field list'
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:22:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'？\' in \'field list\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: 'INSERT sys_comment(user_id, blog_id, content,  replied_id, create_time) VALUES(1, 1, \'123123123123333333333333333333333333333333333333333333333333333123123\', 1, ？)' }
+[2019-07-02T16:16:31.390] [ERROR] normal - database query fail
+[2019-07-02T16:16:31.392] [ERROR] normal - getDocItems error:
+[2019-07-02T16:16:31.393] [ERROR] normal - { Error: ER_BAD_FIELD_ERROR: Unknown column '？' in 'field list'
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:22:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'？\' in \'field list\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: 'INSERT sys_comment(user_id, blog_id, content,  replied_id, create_time) VALUES(1, 1, \'123123123123333333333333333333333333333333333333333333333333333123123\', 1, ？)' }
+[2019-07-02T16:16:46.976] [ERROR] normal - database query fail
+[2019-07-02T16:16:46.978] [ERROR] normal - getDocItems error:
+[2019-07-02T16:16:46.979] [ERROR] normal - { Error: ER_BAD_FIELD_ERROR: Unknown column '？' in 'field list'
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:22:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'？\' in \'field list\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: 'INSERT sys_comment(user_id, blog_id, content,  replied_id, create_time) VALUES(1, 1, \'123123123123333333333333333333333333333333333333333333333333333123123\', 1, ？)' }
+[2019-07-02T16:30:56.455] [ERROR] normal - database query fail
+[2019-07-02T16:30:56.457] [ERROR] normal - getDocItems error:
+[2019-07-02T16:30:56.457] [ERROR] normal - { Error: ER_BAD_FIELD_ERROR: Unknown column '？' in 'field list'
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:22:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'？\' in \'field list\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: 'INSERT sys_comment(user_id, blog_id, content,  replied_id, create_time) VALUES(1, 1, \'123123123123333333333333333333333333333333333333333333333333333123123\', 1, ？)' }
+[2019-07-02T16:31:34.587] [ERROR] normal - database query fail
+[2019-07-02T16:31:34.588] [ERROR] normal - getDocItems error:
+[2019-07-02T16:31:34.589] [ERROR] normal - { Error: ER_BAD_FIELD_ERROR: Unknown column '？' in 'field list'
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:22:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'？\' in \'field list\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: 'INSERT sys_comment(user_id, blog_id, content,  replied_id, create_time) VALUES(1, 1, \'123123123123333333333333333333333333333333333333333333333333333123123\', 1, ？)' }
+[2019-07-02T16:31:49.959] [ERROR] normal - database query fail
+[2019-07-02T16:31:49.960] [ERROR] normal - getDocItems error:
+[2019-07-02T16:31:49.961] [ERROR] normal - { Error: ER_TRUNCATED_WRONG_VALUE: Incorrect datetime value: '1562056309940' for column 'create_time' at row 1
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:22:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_TRUNCATED_WRONG_VALUE',
+  errno: 1292,
+  sqlMessage: 'Incorrect datetime value: \'1562056309940\' for column \'create_time\' at row 1',
+  sqlState: '22007',
+  index: 0,
+  sql: 'INSERT sys_comment(user_id, blog_id, content,  replied_id, create_time) VALUES(1, 1, \'123123123123333333333333333333333333333333333333333333333333333123123\', 1, \'1562056309940\')' }

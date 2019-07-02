@@ -36,12 +36,12 @@ exports.getDocItems = function(id, callback) {
       callback({ type: 500 });
     });
 };
+
 //发送一篇文章
-exports.senddoc = function(docData, callback) {
+exports.addDoc = function(docData, callback) {
   const { dochtml, accountId, title } = docData;
   const _sql = "INSERT sys_blog(dochtml, create_time, account_id, title) VALUES(?,?,?,?)";
   const createTimer = new Date();
-  logger.fatal(createTimer);
   const _sqlParam = [dochtml, createTimer, accountId, title];
   connect
     .querySQL(_sql, _sqlParam)

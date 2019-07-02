@@ -1,5 +1,6 @@
-let Doc = require('../models/doc.db.js');
-let assert = require('assert');
+const Doc = require('../models/doc.db.js');
+const assert = require('assert');
+
 let doc;
 describe('init connect mysql', ()=>{
     before(function(){

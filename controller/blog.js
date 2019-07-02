@@ -32,7 +32,7 @@ router.post("/senddoc",expressJwt({ secret: jwtsecret }), function(req, res) {
     return;
   }
   //若干类型判断
-  Doc.senddoc({
+  Doc.addDoc({
     accountId,
     title,
     dochtml
