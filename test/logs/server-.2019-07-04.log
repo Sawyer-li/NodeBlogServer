@@ -1,0 +1,73 @@
+[2019-07-04T23:28:48.784] [ERROR] normal - database query fail
+[2019-07-04T23:28:48.785] [ERROR] normal - addCommnet error:
+[2019-07-04T23:28:48.786] [ERROR] normal - { Error: ER_BAD_FIELD_ERROR: Unknown column 'blog_id' in 'field list'
+    at Query.Sequence._packetToError (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:103:28)
+    at Socket.emit (events.js:197:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    --------------------
+    at Protocol._enqueue (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:208:25)
+    at /Users/sawyer/githublib/own/myNodeBlog/models/utils/connect.js:22:20
+    at Handshake.onConnect [as _callback] (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'blog_id' in 'field list'",
+  sqlState: '42S22',
+  index: 0,
+  sql:
+   "INSERT sys_comment(account_id, blog_id, content,  replied_id, create_time) VALUES(20, 1, '123123123123333333333333333333333333333333333333333333333333333123123', 1, '2019-07-04 23:28:48.509')" }
+[2019-07-04T23:30:35.669] [ERROR] normal - database query fail
+[2019-07-04T23:30:35.672] [ERROR] normal - addCommnet error:
+[2019-07-04T23:30:35.672] [ERROR] normal - { Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect string value: '\xE5\xB0\xB1\xE6\x98\xAF...' for column 'content' at row 1
+    at Query.Sequence._packetToError (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:103:28)
+    at Socket.emit (events.js:197:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    --------------------
+    at Protocol._enqueue (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:208:25)
+    at /Users/sawyer/githublib/own/myNodeBlog/models/utils/connect.js:22:20
+    at Handshake.onConnect [as _callback] (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_TRUNCATED_WRONG_VALUE_FOR_FIELD',
+  errno: 1366,
+  sqlMessage:
+   "Incorrect string value: '\\xE5\\xB0\\xB1\\xE6\\x98\\xAF...' for column 'content' at row 1",
+  sqlState: 'HY000',
+  index: 0,
+  sql:
+   "INSERT sys_comment(account_id, blog_id, content,  replied_id, create_time) VALUES(21, 1, '就是瞎测试', 1, '2019-07-04 23:30:35.219')" }
+[2019-07-04T23:40:02.197] [ERROR] normal - addCommnet error:
+[2019-07-04T23:40:02.203] [ERROR] normal - TypeError: Cannot read property '0' of null
+    at Comment.getBlogAllComment (/Users/sawyer/githublib/own/myNodeBlog/test/comment.test.js:13:20)
+    at connect.querySQL.then (/Users/sawyer/githublib/own/myNodeBlog/models/comment.db.js:29:13)
+    at processTicksAndRejections (internal/process/next_tick.js:81:5)
+[2019-07-04T23:40:18.602] [ERROR] normal - addCommnet error:
+[2019-07-04T23:40:18.603] [ERROR] normal - TypeError: Cannot read property 'rows' of null
+    at Comment.getBlogAllComment (/Users/sawyer/githublib/own/myNodeBlog/test/comment.test.js:13:21)
+    at connect.querySQL.then (/Users/sawyer/githublib/own/myNodeBlog/models/comment.db.js:29:13)
+    at processTicksAndRejections (internal/process/next_tick.js:81:5)

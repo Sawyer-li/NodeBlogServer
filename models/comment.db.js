@@ -5,7 +5,7 @@ exports.addCommnet = function(data, callback){
     const { userId, blogId, content, repliedCommentId  } = data;
     console.log(data);
     const createTimer = new Date();
-    const _sql = `INSERT sys_comment(user_id, blog_id, content,  replied_id, create_time) VALUES(?, ?, ?, ?, ?)`;
+    const _sql = `INSERT sys_comment(account_id, blog_id, content,  replied_id, create_time) VALUES(?, ?, ?, ?, ?)`;
     const _sqlParam = [userId, blogId, content, repliedCommentId, createTimer];
     connect
         .querySQL(_sql,_sqlParam)
@@ -20,5 +20,16 @@ exports.addCommnet = function(data, callback){
         });
 }
 exports.getBlogAllComment = function(blogId, callback){
-    const 
+    const _sql = "select sys_comment.*,sys_user.username  from sys_comment INNER JOIN  sys_user  on sys_comment.account_id=sys_user.id  where sys_comment.account_id=?";
+    const _sqlParam = [blogId];
+    connect
+        .querySQL(_sql,_sqlParam)
+        .then((rows) => {
+            callback(null, rows);
+        })
+        .catch(err => {
+            logger.error("addCommnet error:");
+            logger.error(err);
+            callback({ type: 500 });
+        });
 }
