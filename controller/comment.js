@@ -3,7 +3,7 @@ let router = express.Router();
 const Comment = require("../models/comment.db.js");
 const expressJwt = require("express-jwt");
 const jwt = require("jsonwebtoken");
-const { jwtsecret } = require("../config");
+const { jwtsecret, staticPath } = require("../config");
 
 router.post("/addComment",expressJwt({ secret: jwtsecret }), function(req, res) {
     const { content, blogId } = req.body;
@@ -30,3 +30,18 @@ router.post("/addComment",expressJwt({ secret: jwtsecret }), function(req, res) 
       res.json({ id });
     });
 });
+router.get("/:blogId", function(req, res){
+  const { blogId } = req.params;
+  console.log(blogId);
+  Comment.getBlogAllComment(blogId, function(err, rows){
+    console.log(rows);
+    for(let i =0; i<rows.length; i++){
+      rows[i].head_url = staticPath + rows[i].head_url;
+    }
+    staticPath
+    res.json(rows);
+  })
+})
+
+
+module.exports = router;

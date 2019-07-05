@@ -20,7 +20,10 @@ exports.addCommnet = function(data, callback){
         });
 }
 exports.getBlogAllComment = function(blogId, callback){
-    const _sql = "select sys_comment.*,sys_user.username  from sys_comment INNER JOIN  sys_user  on sys_comment.account_id=sys_user.id  where sys_comment.account_id=?";
+    const _sql = `select sys_comment.*,sys_user.username,sys_user.head_url  
+        from sys_comment 
+        INNER JOIN                                                                                                                                                                                                                                                                                               sys_user  on sys_comment.account_id=sys_user.id  
+        where sys_comment.blog_id=?`;
     const _sqlParam = [blogId];
     connect
         .querySQL(_sql,_sqlParam)

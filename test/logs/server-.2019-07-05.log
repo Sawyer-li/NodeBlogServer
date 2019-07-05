@@ -1,0 +1,30 @@
+[2019-07-05T12:06:32.694] [ERROR] normal - database query fail
+[2019-07-05T12:06:32.696] [ERROR] normal - addCommnet error:
+[2019-07-05T12:06:32.698] [ERROR] normal - { Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect string value: '\xE4\xB9\xB1\xE6\xB5\x8B...' for column 'content' at row 1
+    at Query.Sequence._packetToError (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    --------------------
+    at Protocol._enqueue (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:208:25)
+    at /home/sawyer/githublib/NodeBlogServer/models/utils/connect.js:22:20
+    at Handshake.onConnect [as _callback] (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/home/sawyer/githublib/NodeBlogServer/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_TRUNCATED_WRONG_VALUE_FOR_FIELD',
+  errno: 1366,
+  sqlMessage: 'Incorrect string value: \'\\xE4\\xB9\\xB1\\xE6\\xB5\\x8B...\' for column \'content\' at row 1',
+  sqlState: 'HY000',
+  index: 0,
+  sql: 'INSERT sys_comment(account_id, blog_id, content,  replied_id, create_time) VALUES(23, 37, \'乱测一统asdasa lalalal\', 1, \'2019-07-05 12:06:32.683\')' }

@@ -7,6 +7,7 @@ const config = {
     password: 'aixiaoyao',
     database: 'blog'
   },
-  jwtsecret: 'aixiaoyao'
+  jwtsecret: 'aixiaoyao',
+  staticPath: "http://192.168.1.153:3000" 
 }
 module.exports = config;
