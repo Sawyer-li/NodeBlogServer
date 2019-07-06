@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Doc = require("../models/doc.db.js");
 const expressJwt = require("express-jwt")
-const { jwtsecret } = require("../config");
+const { jwtsecret, staticPath } = require("../config");
 
 /**
  * @api {post} /api/blog/senddoc SendBlog
@@ -68,10 +68,9 @@ router.get("/getBlogDetail/:id", function(req, res) {
     if (data.length === 0) {
       res.status(404).end();
     } else {
+      data[0].head_url = staticPath + data[0].head_url;
       res.json(data[0]);
     }
   });
 });
-
-module.exports = router;
 module.exports = router;

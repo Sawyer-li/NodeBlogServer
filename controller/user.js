@@ -3,7 +3,7 @@ let router = express.Router();
 const User = require("../models/user.db.js");
 const expressJwt = require("express-jwt")
 const jwt = require("jsonwebtoken");
-const { jwtsecret } = require("../config")
+const { jwtsecret,staticPath } = require("../config")
 
 /**
  * multer配置
@@ -112,10 +112,11 @@ router.post("/login", function(req, res) {
     if (data) {
       if (password === data.password) {
         const { username, id, head_url} = data;
+
         const user = {
           username,
           id,
-          head_url
+          head_url: staticPath+head_url
         };
         const token = jwt.sign(user, jwtsecret, {
           expiresIn: "2 days"

@@ -5,6 +5,15 @@ const expressJwt = require("express-jwt");
 const jwt = require("jsonwebtoken");
 const { jwtsecret, staticPath } = require("../config");
 
+/**
+ * @api {post} /api/comment/addComment AddComment
+ * @apiName AddComment
+ * @apiGroup Comment
+ *
+ * @apiParam {String} content
+ * @apiParam {Integer} blogId
+ *
+ */
 router.post("/addComment",expressJwt({ secret: jwtsecret }), function(req, res) {
     const { content, blogId } = req.body;
     const  accountId  = req.user.id;
@@ -30,6 +39,12 @@ router.post("/addComment",expressJwt({ secret: jwtsecret }), function(req, res) 
       res.json({ id });
     });
 });
+
+/**
+ * @api {post} /api/comment/:blogId GetBlogAllComment
+ * @apiName GetBlogAllComment
+ * @apiGroup Comment
+ */
 router.get("/:blogId", function(req, res){
   const { blogId } = req.params;
   console.log(blogId);
@@ -42,6 +57,4 @@ router.get("/:blogId", function(req, res){
     res.json(rows);
   })
 })
-
-
 module.exports = router;
