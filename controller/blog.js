@@ -37,7 +37,7 @@ router.post("/senddoc",expressJwt({ secret: jwtsecret }), function(req, res) {
     title,
     dochtml
   }, function(err, id) {
-    if (err) throw err;
+    if(err) return res.status(err.type).json({ msg: err.msg })
     res.json({ id });
   });
 });
@@ -52,7 +52,7 @@ router.post("/senddoc",expressJwt({ secret: jwtsecret }), function(req, res) {
  */
 router.get("/getAllTitle", (req, res) => {
   Doc.getAllDocTitle((err, data) => {
-    if (err) console.log(err);
+    if(err) return res.status(err.type).json({ msg: err.msg });
     res.json(data);
   });
 });
@@ -65,6 +65,7 @@ router.get("/getAllTitle", (req, res) => {
 router.get("/getBlogDetail/:id", function(req, res) {
   const { id } = req.params;
   Doc.getDocItems(id, function(err, data) {
+    if(err) return res.status(err.type).json({ msg: err.msg });
     if (data.length === 0) {
       res.status(404).end();
     } else {
@@ -73,4 +74,13 @@ router.get("/getBlogDetail/:id", function(req, res) {
     }
   });
 });
+
+router.get("/getUserAllDoc/:id", function(req, res) {
+  const { id } = req.params;
+  Doc.getUserAllDocTitle(id, function(err, data) {
+    if(err) return res.status(err.type).json({ msg: err.msg })
+    res.json(data);
+  });
+});
+
 module.exports = router;

@@ -20,5 +20,5 @@ const logger = log4js.getLogger('normal');
 
 exports.logger = logger;
 exports.log4use = function (app) {
-    app.use(log4js.connectLogger(logger, {level: 'debug', format: ':method :url'}));
+    app.use(log4js.connectLogger(logger, {level: 'info', format: ':method :url'}));
 }
