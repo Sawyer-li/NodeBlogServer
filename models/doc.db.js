@@ -13,7 +13,7 @@ exports.getAllDocTitle = function(callback) {
     .catch(err => {
       logger.error("getAllDocTitle error:");
       logger.error(err);
-      callback({ type: 500 ,msg: "model getAllDocTitle 层错误"}});
+      callback({ type: 500 ,msg: "model getAllDocTitle 层错误"});
     });
 };
 //获取用户下的所有文章
