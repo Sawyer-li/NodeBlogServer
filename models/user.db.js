@@ -34,7 +34,6 @@ exports.addUser = async function(user, callback) {
       callback({ type: 500 });
     });
 };
-
 exports.updateHead = function(data, callback){
   const {path, id } = data;
   const   _sql = `UPDATE sys_user SET head_url = ? WHERE id = ${id}`;
@@ -50,6 +49,23 @@ exports.updateHead = function(data, callback){
       callback({type: 500,msg: "model层错误"});
     })
 }
+exports.getUserByEmail = function(email, callback) {
+  const _sql = "SELECT * FROM sys_user WHERE email = ?";
+  const _sqlParam = [email];
+  connect
+    .querySQL(_sql, _sqlParam)
+    .then(rows => {
+      if (rows[0]) callback(null, rows[0]);
+      else{
+        callback(null, null);
+      }
+    })
+    .catch(err => {
+      logger.error("getUserByEmail error");
+      logger.error(err);
+      callback({ type: 500 });
+    });
+};
 exports.getUserByName = function(name, callback) {
   const _sql = "SELECT * FROM sys_user WHERE username = ?";
   const _sqlParam = [name];

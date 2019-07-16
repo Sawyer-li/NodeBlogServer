@@ -55,7 +55,7 @@ router.post("/avatar", expressJwt({ secret: jwtsecret }), upload.single('avatar'
       path: truePath
     },(err, data)=>{
       if(err) res.status(err.type).json({ msg: err.msg });
-      res.json({msg: "上传成功",path: truePath});
+      res.json({msg: "上传成功",path: staticPath+truePath});
     })
   }
 })
@@ -99,44 +99,49 @@ router.post("/register", function(req, res) {
  * @apiSuccess {String} firstname Firstname of the User.
  * @apiSuccess {String} lastname  Lastname of the User.
  */
+
 router.post("/login", function(req, res) {
-  const { name, password } = req.body;
-  console.log(req.body);
-  if (!name || name === "" || !password || password === "") {
-    return res.status(401).json({
+  const { account, password } = req.body;
+  if (!account || account === "" || !password || password === "") {
+    return res.status(400).json({
       mess: "账户或密码为空"
     });
   }
-  User.getUserByName(name, (err, data) => {
+  const regEmail = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+  function dealUser(err, data){
     if (err) throw err;
-    if (data) {
-      if (password === data.password) {
-        const { username, id, head_url} = data;
-
-        const user = {
-          username,
-          id,
-          head_url: staticPath+head_url
-        };
-        const token = jwt.sign(user, jwtsecret, {
-          expiresIn: "2 days"
-        });
-        res.json({
-          msg: "登入成功",
-          token,
-          user
-        });
+      if (data) {
+        if (password === data.password) {
+          const { username, id, head_url} = data;
+          const user = {
+            username,
+            id,
+            head_url: staticPath+head_url
+          };
+          const token = jwt.sign(user, jwtsecret, {
+            expiresIn: "2 days"
+          });
+          res.json({
+            msg: "登入成功",
+            token,
+            user
+          });
+        } else {
+          res.status(400).json({
+            mess: "密码不正确"
+          });
+        }
       } else {
-        res.status(401).json({
-          mess: "密码不正确"
+        res.status(400).json({
+          mess: "账户不存在"
         });
-      }
-    } else {
-      res.status(401).json({
-        mess: "账户不存在"
-      });
-    }
-  });
+      }  
+  }
+  if(regEmail.test(account)){
+    User.getUserByEmail(account, dealUser);
+  }else{
+    User.getUserByName(account, dealUser);
+  }
 });
 router.get("/:username", function(req, res){
 
