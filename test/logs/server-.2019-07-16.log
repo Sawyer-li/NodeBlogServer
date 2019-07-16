@@ -1,0 +1,124 @@
+[2019-07-16T20:25:22.817] [ERROR] normal - database query fail
+[2019-07-16T20:25:22.822] [ERROR] normal - updateSampleIntro error
+[2019-07-16T20:25:22.823] [ERROR] normal - { Error: ER_BAD_FIELD_ERROR: Unknown column '李松野聪明的一逼' in 'field list'
+    at Query.Sequence._packetToError (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:103:28)
+    at Socket.emit (events.js:197:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    --------------------
+    at Protocol._enqueue (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:208:25)
+    at /Users/sawyer/githublib/own/myNodeBlog/models/utils/connect.js:33:20
+    at Handshake.onConnect [as _callback] (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column '李松野聪明的一逼' in 'field list'",
+  sqlState: '42S22',
+  index: 0,
+  sql:
+   'UPDATE sys_user SET short_introduction=李松野聪明的一逼 where id=20' }
+[2019-07-16T20:25:38.909] [ERROR] normal - database query fail
+[2019-07-16T20:25:38.914] [ERROR] normal - updateSampleIntro error
+[2019-07-16T20:25:38.914] [ERROR] normal - { Error: ER_BAD_FIELD_ERROR: Unknown column 'lisongye' in 'field list'
+    at Query.Sequence._packetToError (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:103:28)
+    at Socket.emit (events.js:197:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    --------------------
+    at Protocol._enqueue (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:208:25)
+    at /Users/sawyer/githublib/own/myNodeBlog/models/utils/connect.js:33:20
+    at Handshake.onConnect [as _callback] (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'lisongye' in 'field list'",
+  sqlState: '42S22',
+  index: 0,
+  sql:
+   'UPDATE sys_user SET short_introduction=lisongye where id=20' }
+[2019-07-16T20:25:58.379] [ERROR] normal - database query fail
+[2019-07-16T20:25:58.382] [ERROR] normal - updateSampleIntro error
+[2019-07-16T20:25:58.383] [ERROR] normal - { Error: ER_BAD_FIELD_ERROR: Unknown column 'lisongye' in 'field list'
+    at Query.Sequence._packetToError (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:103:28)
+    at Socket.emit (events.js:197:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    --------------------
+    at Protocol._enqueue (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:208:25)
+    at /Users/sawyer/githublib/own/myNodeBlog/models/utils/connect.js:33:20
+    at Handshake.onConnect [as _callback] (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'lisongye' in 'field list'",
+  sqlState: '42S22',
+  index: 0,
+  sql:
+   'UPDATE sys_user SET short_introduction=lisongye where id=20' }
+[2019-07-16T20:29:33.076] [ERROR] normal - database query fail
+[2019-07-16T20:29:33.079] [ERROR] normal - updateSampleIntro error
+[2019-07-16T20:29:33.079] [ERROR] normal - { Error: ER_BAD_FIELD_ERROR: Unknown column 'lisongye' in 'field list'
+    at Query.Sequence._packetToError (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:52:14)
+    at Query.ErrorPacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:103:28)
+    at Socket.emit (events.js:197:13)
+    at addChunk (_stream_readable.js:288:12)
+    at readableAddChunk (_stream_readable.js:269:11)
+    at Socket.Readable.push (_stream_readable.js:224:10)
+    --------------------
+    at Protocol._enqueue (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:145:48)
+    at PoolConnection.query (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:208:25)
+    at /Users/sawyer/githublib/own/myNodeBlog/models/utils/connect.js:33:20
+    at Handshake.onConnect [as _callback] (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Pool.js:64:7)
+    at Handshake.Sequence.end (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:88:24)
+    at Handshake.Sequence.OkPacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/sequences/Sequence.js:97:8)
+    at Protocol._parsePacket (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:279:23)
+    at Parser.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/protocol/Protocol.js:39:16)
+    at Socket.<anonymous> (/Users/sawyer/githublib/own/myNodeBlog/node_modules/mysql/lib/Connection.js:103:28)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'lisongye' in 'field list'",
+  sqlState: '42S22',
+  index: 0,
+  sql:
+   'UPDATE sys_user SET short_introduction=lisongye where id=20' }

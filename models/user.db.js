@@ -1,6 +1,34 @@
 const connect = require("./utils/connect");
 const { logger } = require("../tool/log");
-
+const { strlen } = require("../tool")
+exports.updateShortIntro = function(data, callback) {
+  const { id, intro } = data;
+  const _sql = `UPDATE sys_user SET short_introduction="${intro}" WHERE id=${id}`;
+  connect
+    .querySQL(_sql)
+    .then(rows => {
+      callback(null, rows);
+    })
+    .catch(err => {
+      logger.error("updateSampleIntro error");
+      logger.error(err);
+      callback({ type: 500, msg: "model层错误" });
+    });
+};
+exports.updateIntro = function(data, callback) {
+  const { id, intro } = data;
+  const _sql = `UPDATE sys_user SET introduction="${intro}" WHERE id=${id}`;
+  connect
+    .querySQL(_sql)
+    .then(rows => {
+      callback(null, rows);
+    })
+    .catch(err => {
+      logger.error("updateIntro error");
+      logger.error(err);
+      callback({ type: 500, msg: "model层错误" });
+    });
+};
 exports.addUser = async function(user, callback) {
   const { name, password, email, head_url } = user;
   const findNameSql = `SELECT id from sys_user where username='${name}'`;
@@ -18,7 +46,7 @@ exports.addUser = async function(user, callback) {
         const registerTime = new Date();
         const _addSql =
           "INSERT sys_user(username,password,create_time,email,head_url) VALUES(?,?,?,?,?)";
-        const _addSqlParam = [name, password, registerTime, email,head_url];
+        const _addSqlParam = [name, password, registerTime, email, head_url];
         connect.querySQL(_addSql, _addSqlParam).then(rows => {
           callback(null, {
             msg: "插入成功"
@@ -34,21 +62,21 @@ exports.addUser = async function(user, callback) {
       callback({ type: 500 });
     });
 };
-exports.updateHead = function(data, callback){
-  const {path, id } = data;
-  const   _sql = `UPDATE sys_user SET head_url = ? WHERE id = ${id}`;
+exports.updateHead = function(data, callback) {
+  const { path, id } = data;
+  const _sql = `UPDATE sys_user SET head_url = ? WHERE id = ${id}`;
   const _sqlParam = [path];
   connect
     .querySQL(_sql, _sqlParam)
     .then(rows => {
-      callback(null,rows);
+      callback(null, rows);
     })
     .catch(err => {
       logger.error("updateHead error");
       logger.error(err);
-      callback({type: 500,msg: "model层错误"});
-    })
-}
+      callback({ type: 500, msg: "model层错误" });
+    });
+};
 exports.getUserByEmail = function(email, callback) {
   const _sql = "SELECT * FROM sys_user WHERE email = ?";
   const _sqlParam = [email];
@@ -56,7 +84,7 @@ exports.getUserByEmail = function(email, callback) {
     .querySQL(_sql, _sqlParam)
     .then(rows => {
       if (rows[0]) callback(null, rows[0]);
-      else{
+      else {
         callback(null, null);
       }
     })
@@ -73,7 +101,7 @@ exports.getUserByName = function(name, callback) {
     .querySQL(_sql, _sqlParam)
     .then(rows => {
       if (rows[0]) callback(null, rows[0]);
-      else{
+      else {
         callback(null, null);
       }
     })
@@ -90,7 +118,7 @@ exports.getUserById = function(id, callback) {
     .querySQL(_sql, _sqlParam)
     .then(rows => {
       if (rows[0]) callback(null, rows[0]);
-      else{
+      else {
         callback(null, null);
       }
     })
