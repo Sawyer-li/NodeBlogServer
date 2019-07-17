@@ -1,6 +1,5 @@
 const connect = require("./utils/connect");
 const { logger } = require("../tool/log");
-const { strlen } = require("../tool")
 exports.updateShortIntro = function(data, callback) {
   const { id, intro } = data;
   const _sql = `UPDATE sys_user SET short_introduction="${intro}" WHERE id=${id}`;
@@ -112,13 +111,14 @@ exports.getUserByName = function(name, callback) {
     });
 };
 exports.getUserById = function(id, callback) {
-  const _sql = "SELECT * FROM sys_user WHERE id = ?";
-  const _sqlParam = [name];
+  const _sql = `SELECT username, email, mobile, introduction, short_introduction FROM sys_user WHERE id =${id}`;
+  console.log(_sql);
   connect
-    .querySQL(_sql, _sqlParam)
+    .querySQL(_sql)
     .then(rows => {
-      if (rows[0]) callback(null, rows[0]);
-      else {
+      if (rows[0]){
+        callback(null, rows[0]);
+      } else {
         callback(null, null);
       }
     })

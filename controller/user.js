@@ -4,7 +4,7 @@ const User = require("../models/user.db.js");
 const expressJwt = require("express-jwt");
 const jwt = require("jsonwebtoken");
 const { jwtsecret, staticPath } = require("../config");
-const { strlen } = require("../tool")
+const { strlen, camelCaseObjKey } = require("../tool")
 
 /**
  * multer配置
@@ -32,6 +32,21 @@ const upload = multer({
   storage: storage
 });
 
+router.get("/me", expressJwt({ secret: jwtsecret }), function(req, res) {
+  const { user} = req;
+  console.log(user);
+  const { id } = user;
+  User.getUserById(
+    id,
+    function(err, data) {
+      if (err) {
+        res.status(err.type).json({ msg: err.msg });
+      } else {
+        res.json(camelCaseObjKey(data));
+      }
+    }
+  );
+});
 /**
  * @api {post} /api/user/register register
  * @apiName RegisterUser
@@ -135,7 +150,6 @@ router.post("/register", function(req, res) {
     }
   );
 });
-
 /**
  * @api {post} /api/user/login login
  * @apiName LoginUser
@@ -147,7 +161,6 @@ router.post("/register", function(req, res) {
  * @apiSuccess {String} firstname Firstname of the User.
  * @apiSuccess {String} lastname  Lastname of the User.
  */
-
 router.post("/login", function(req, res) {
   const { account, password } = req.body;
   if (!account || account === "" || !password || password === "") {
