@@ -172,6 +172,7 @@ router.post("/register", function(req, res) {
  */
 router.post("/login", function(req, res) {
   const { account, password } = req.body;
+  console.log(account, password);
   if (!account || account === "" || !password || password === "") {
     return res.status(400).json({
       mess: "账户或密码为空"
@@ -180,6 +181,7 @@ router.post("/login", function(req, res) {
   const regEmail = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
   function dealUser(err, data) {
     if (err) throw err;
+    console.log(data);
     if (data) {
       if (password === data.password) {
         const { username, id, head_url } = data;
