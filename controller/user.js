@@ -85,43 +85,27 @@ router.post(
     }
   }
 );
-router.post("/sampleIntro", function(req, res) {
-  const { user, intro } = req;
-  const { id } = user;
-  if(strlen(intro) > 40){
-    return res.status(400).json({
-      msg: "不能超过20个汉子或40个字母"
-    });
-  }
-  User.updateShortIntro(
-    {
-      id,
-      intro
-    },
-    (err, data) => {
-      if (err) res.status(err.type).json({ msg: err.msg });
-      res.json({ msg: "设置成功"});
-    }
-  );
-});
-router.post("/intro", function(req, res) {
-  const { user, intro } = req;
-  const { id } = user;
-  if(strlen(intro) > 200){
-    return res.status(400).json({
-      msg: "不能超过100个汉子或200个字母"
-    });
-  }
-  User.updateIntro(
-    {
-      id,
-      intro
-    },
-    (err, data) => {
-      if (err) res.status(err.type).json({ msg: err.msg });
-      res.json({ msg: "设置成功"});
-    }
-  );
+router.post("/set", function(req, res) {
+  const { user } = req;
+  const { type, text } = req.body;
+  console.log(text, type);
+  res.json({msg: "success"});
+  // const { id } = user;
+  // if(strlen(intro) > 40){
+  //   return res.status(400).json({
+  //     msg: "不能超过20个汉子或40个字母"
+  //   });
+  // }
+  // User.updateShortIntro(
+  //   {
+  //     id,
+  //     intro
+  //   },
+  //   (err, data) => {
+  //     if (err) res.status(err.type).json({ msg: err.msg });
+  //     res.json({ msg: "设置成功"});
+  //   }
+  // );
 });
 router.post("/register", function(req, res) {
   const { name, password, email } = req.body;
