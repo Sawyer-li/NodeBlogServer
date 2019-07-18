@@ -1,5 +1,33 @@
 const connect = require("./utils/connect");
 const { logger } = require("../tool/log");
+exports.updateMobile = function(data, callback) {
+  const { id, mobile } = data;
+  const _sql = `UPDATE sys_user SET mobile="${mobile}" WHERE id=${id}`;
+  connect
+    .querySQL(_sql)
+    .then(rows => {
+      callback(null, rows);
+    })
+    .catch(err => {
+      logger.error("updateMobile error");
+      logger.error(err);
+      callback({ type: 500, msg: "model层错误" });
+    });
+};
+exports.updateUsername = function(data, callback) {
+  const { id, username } = data;
+  const _sql = `UPDATE sys_user SET username="${username}" WHERE id=${id}`;
+  connect
+    .querySQL(_sql)
+    .then(rows => {
+      callback(null, rows);
+    })
+    .catch(err => {
+      logger.error("updateUsername error");
+      logger.error(err);
+      callback({ type: 500, msg: "model层错误" });
+    });
+};
 exports.updateShortIntro = function(data, callback) {
   const { id, intro } = data;
   const _sql = `UPDATE sys_user SET short_introduction="${intro}" WHERE id=${id}`;
@@ -116,7 +144,7 @@ exports.getUserById = function(id, callback) {
   connect
     .querySQL(_sql)
     .then(rows => {
-      if (rows[0]){
+      if (rows[0]) {
         callback(null, rows[0]);
       } else {
         callback(null, null);

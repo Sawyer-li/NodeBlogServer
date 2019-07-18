@@ -4,7 +4,7 @@ const User = require("../models/user.db.js");
 const expressJwt = require("express-jwt");
 const jwt = require("jsonwebtoken");
 const { jwtsecret, staticPath } = require("../config");
-const { strlen, camelCaseObjKey } = require("../tool")
+const { strlen, camelCaseObjKey } = require("../tool");
 
 /**
  * multer配置
@@ -33,19 +33,16 @@ const upload = multer({
 });
 
 router.get("/me", expressJwt({ secret: jwtsecret }), function(req, res) {
-  const { user} = req;
+  const { user } = req;
   console.log(user);
   const { id } = user;
-  User.getUserById(
-    id,
-    function(err, data) {
-      if (err) {
-        res.status(err.type).json({ msg: err.msg });
-      } else {
-        res.json(camelCaseObjKey(data));
-      }
+  User.getUserById(id, function(err, data) {
+    if (err) {
+      res.status(err.type).json({ msg: err.msg });
+    } else {
+      res.json(camelCaseObjKey(data));
     }
-  );
+  });
 });
 /**
  * @api {post} /api/user/register register
@@ -85,27 +82,55 @@ router.post(
     }
   }
 );
-router.post("/set", function(req, res) {
+router.post("/set", expressJwt({ secret: jwtsecret }), function(req, res) {
   const { user } = req;
+  const { id } = user;
   const { type, text } = req.body;
-  console.log(text, type);
-  res.json({msg: "success"});
+
+  var callback = (err, data) => {
+    console.log(data);
+    if (err) return res.status(err.type).json({ msg: err.msg });
+    res.json({ msg: "设置成功" });
+  };
+  if (type == "shortIntroduction") {
+    User.updateShortIntro(
+      {
+        id,
+        intro: text
+      },
+      callback
+    );
+  } else if (type == "introduction") {
+    User.updateIntro(
+      {
+        id,
+        intro: text
+      },
+      callback
+    );
+  } else if (type == "username") {
+    User.updateUsername(
+      {
+        id,
+        username: text
+      },
+      callback
+    );
+  } else if (type == "mobile") {
+    User.updateMobile(
+      {
+        id,
+        mobile: text
+      },
+      callback
+    );
+  }
   // const { id } = user;
   // if(strlen(intro) > 40){
   //   return res.status(400).json({
   //     msg: "不能超过20个汉子或40个字母"
   //   });
   // }
-  // User.updateShortIntro(
-  //   {
-  //     id,
-  //     intro
-  //   },
-  //   (err, data) => {
-  //     if (err) res.status(err.type).json({ msg: err.msg });
-  //     res.json({ msg: "设置成功"});
-  //   }
-  // );
 });
 router.post("/register", function(req, res) {
   const { name, password, email } = req.body;

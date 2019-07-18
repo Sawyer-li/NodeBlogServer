@@ -8,6 +8,6 @@ const config = {
     database: 'blog'
   },
   jwtsecret: 'aixiaoyao',
-  staticPath: "http://192.168.1.153:3000" 
+  staticPath: "http://localhost:3000" 
 }
 module.exports = config;
