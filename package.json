@@ -7,7 +7,6 @@
     "test": "mocha"
   },
   "author": "",
-  "license": "ISC",
   "apidoc": {
     "title": "这是一个标题",
     "url": "localhost:3000",

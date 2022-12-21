@@ -82,5 +82,10 @@ router.get("/getUserAllDoc/:id", function(req, res) {
     res.json(data);
   });
 });
+router.get("/testDoc", function(req, res) {
+  res.json({
+    status: 'success'
+  })
+});
 
 module.exports = router;
