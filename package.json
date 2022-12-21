@@ -13,7 +13,7 @@
     "sampleUrl": "http://localhost:3000/api"
   },
   "dependencies": {
-    "ejs": "^2.5.8",
+    "ejs": "^3.1.7",
     "express": "^4.16.3",
     "express-jwt": "^5.3.1",
     "express-session": "^1.15.6",
